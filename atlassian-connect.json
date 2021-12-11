@@ -1,16 +1,18 @@
 {
-    "key": "my-app",
-    "name": "My app",
+    "key": "time2inc.worklog-migrator",
+    "name": "Worklog Migrator",
     "description": "My very first app",
     "baseUrl": "{{localBaseUrl}}",
     "authentication": {
         "type": "jwt"
     },
     "lifecycle": {
-        "installed": "/installed"
+        "installed": "/installed",
+        "uninstalled": "/uninstalled"
     },
     "scopes": [
-        "READ"
+        "READ",
+        "WRITE"
     ],
     "apiMigrations":{
         "signed-install": true
@@ -20,17 +22,6 @@
             {
                 "key": "hello-world-page-jira",
                 "location": "system.top.navigation.bar",
-                "name": {
-                    "value": "Hello World"
-                },
-                "url": "/hello-world",
-                "conditions": [{
-                    "condition": "user_is_logged_in"
-                }]
-            },
-            {
-                "key": "hello-world-page-confluence",
-                "location": "system.header/left",
                 "name": {
                     "value": "Hello World"
                 },

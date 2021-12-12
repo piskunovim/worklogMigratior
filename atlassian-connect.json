@@ -20,12 +20,12 @@
     "modules": {
         "generalPages": [
             {
-                "key": "hello-world-page-jira",
+                "key": "worklogs-manager-page",
                 "location": "system.top.navigation.bar",
                 "name": {
-                    "value": "Hello World"
+                    "value": "Worklog Manager"
                 },
-                "url": "/hello-world",
+                "url": "/worklogs-manager",
                 "conditions": [{
                     "condition": "user_is_logged_in"
                 }]

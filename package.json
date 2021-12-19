@@ -6,6 +6,9 @@
     "react": "React",
     "react-dom": "ReactDOM"
   },
+  "alias": {
+    "components": "./components"
+  },
   "scripts": {
     "build-jsx-browser": "parcel build --log-level 1 --global __root_component --out-dir views views/*.jsx",
     "build-jsx-node": "parcel build --log-level 1 --no-minify --target node --out-dir views/node views/*.jsx",
@@ -36,7 +39,7 @@
     "react-dom": "^17.0.2",
     "react-is": "^17.0.2",
     "sequelize": "^6.3.5",
-    "styled-components": "^5.2.0"
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",

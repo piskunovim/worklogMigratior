@@ -25,7 +25,7 @@
                 "name": {
                     "value": "Worklog Manager"
                 },
-                "url": "/worklogs-manager",
+                "url": "/worklogs-migrator",
                 "conditions": [{
                     "condition": "user_is_logged_in"
                 }]

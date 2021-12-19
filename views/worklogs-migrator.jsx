@@ -5,16 +5,20 @@ import WorklogPicker from 'components/WorklogPicker';
 import { H2 } from 'components/Heading';
 import Block from 'components/Block';
 
+import './global.css';
+
 const WorklogsMigrator = () => (
-<Block>
-    <H2>Worklogs Manager</H2>
-    <Block type='flex'>
-        <IssuePicker /> <UserPicker />
-    </Block>
-    <Block>
-        <WorklogPicker />
-    </Block>
-</Block>
+	<Block>
+		<H2>Worklogs Manager</H2>
+
+		<Block type='flex'>
+			<IssuePicker /> <UserPicker />
+		</Block>
+
+		<Block>
+			<WorklogPicker />
+		</Block>
+	</Block>
 );
 
 

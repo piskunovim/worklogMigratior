@@ -5,14 +5,12 @@ export default function routes(app, addon) {
         res.redirect('/atlassian-connect.json');
     });
 
-    // This is an example route used by "generalPages" module (see atlassian-connect.json).
-    // Verify that the incoming request is authenticated with Atlassian Connect.
     app.get('/worklogs-migrator', addon.authenticate(), (req, res) => {
         if (!req.context.userAccountId) res.render('unauthorized');
         // Rendering a template is easy; the render method takes two params: the name of the component or template file, and its props.
         // Handlebars and jsx are both supported, but please note that jsx changes require `npm run watch-jsx` in order to be picked up by the server.
         res.render(
-          'worklogs-migrator.jsx', // change this to 'hello-world.jsx' to use the Atlaskit & React version
+          'index.jsx', // change this to 'hello-world.jsx' to use the Atlaskit & React version
           {
             title: 'Worklogs Migrator',
             browserOnly: true
@@ -21,6 +19,4 @@ export default function routes(app, addon) {
           }
         );
     });
-
-    // Add additional route handlers here...
 }

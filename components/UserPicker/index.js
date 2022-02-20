@@ -110,7 +110,7 @@ const UserPicker = ({ id, value = [], onChange = () => { }, label }) => {
         <TextField
           {...params}
           label={label}
-          placeholder="Search..."
+          placeholder="Search users..."
           onChange={handleSearch}
         />
       )}

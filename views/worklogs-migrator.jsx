@@ -10,7 +10,16 @@ import types from './context/types';
 
 const WorklogsMigrator = () => {
 	const { state, dispatch } = useContext(ContextApp);
-
+	
+	const handleChangeIssue = (newIssues) => {
+		dispatch({
+			type: types.SET_ISSUES,
+			payload: {
+				users: newIssues,
+			},
+		});
+	};
+	
 	const handleChangeUser = (newUsers) => {
 		dispatch({
 			type: types.SET_USERS,
@@ -25,7 +34,11 @@ const WorklogsMigrator = () => {
 			<H2>Worklogs Manager</H2>
 
 			<Block type='flex'>
-				<IssuePicker />
+				<IssuePicker
+					id='worklog-issue-picker'
+					value={state.issues}
+					onChange={handleChangeIssue}
+				/>
 				<UserPicker
 					id='worklog-user-picker'
 					value={state.users}
